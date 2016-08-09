@@ -8,7 +8,7 @@ var child = require('child_process');
 var path = require('path');
 var fs = require('fs');
 var shell = require('shelljs');
-var pjson = require('root-require')('package.json');
+var pjson = require.main.require('package');
 
 var PHP_CGI = pjson["php-cgi"] || shell.which('php-cgi');
 
