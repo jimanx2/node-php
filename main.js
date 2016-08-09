@@ -8,8 +8,9 @@ var child = require('child_process');
 var path = require('path');
 var fs = require('fs');
 var shell = require('shelljs');
+var pjson = require('root-require')('package.json');
 
-var PHP_CGI = shell.which('php-cgi');
+var PHP_CGI = pjson["php-cgi"] || shell.which('php-cgi');
 
 if (!PHP_CGI) {
   throw new Error('"php-cgi" cannot be found');
