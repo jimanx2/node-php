@@ -12,8 +12,7 @@
   },
   "main": "./main.js",
   "dependencies": {
-    "shelljs": "^0.6.0",
-    "root-require": "*"
+    "shelljs": "^0.6.0"
   },
   "devDependencies": {
     "eslint": "*",
